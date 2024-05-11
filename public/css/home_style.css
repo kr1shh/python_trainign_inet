@@ -1,1 +1,89 @@
-/*# sourceMappingURL=home_style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+.hero_container {
+  width: 100%;
+  padding: 90px 0 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  gap: 30px;
+}
+@media (min-width: 640px) {
+  .hero_container {
+    flex-direction: row-reverse;
+    padding: 170px 0 100px 0;
+  }
+}
+.hero_container .hero_img {
+  width: 200px;
+}
+@media (min-width: 640px) {
+  .hero_container .hero_img {
+    width: 300px;
+  }
+}
+@media (min-width: 769px) {
+  .hero_container .hero_img {
+    width: 390px;
+  }
+}
+.hero_container .hero_img img {
+  width: 100%;
+}
+.hero_container .hero_content {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+@media (min-width: 640px) {
+  .hero_container .hero_content {
+    align-items: start;
+  }
+}
+.hero_container .hero_content span {
+  font-family: "Unbounded";
+  font-weight: 900;
+  font-size: 36px;
+  text-align: center;
+  width: 250px;
+}
+@media (min-width: 640px) {
+  .hero_container .hero_content span {
+    text-align: start;
+    font-size: 48px;
+    width: 300px;
+  }
+}
+@media (min-width: 769px) {
+  .hero_container .hero_content span {
+    font-size: 56px;
+    width: 400px;
+  }
+}
+.hero_container .hero_content p {
+  font-family: "Montserrat";
+  text-align: center;
+  font-size: 10px;
+  width: 250px;
+}
+@media (min-width: 640px) {
+  .hero_container .hero_content p {
+    text-align: start;
+    font-size: 12px;
+    width: 300px;
+  }
+}
+.hero_container .hero_content a button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50px;
+  font-family: "Unbounded";
+  font-weight: 900;
+  background-color: #FFD537;
+  color: #023047;
+  margin-top: 20px;
+}/*# sourceMappingURL=home_style.css.map */

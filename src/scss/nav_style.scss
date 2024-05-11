@@ -4,6 +4,7 @@ body,html{
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    background-color: $primary;
 }
 
 nav{
@@ -13,7 +14,8 @@ nav{
     justify-content: center;
 
     .nav_container{
-        position: relative;
+        top: 16px;
+        position: fixed;
         width: 90%;
         height: 56px;
         display: flex;
@@ -23,11 +25,15 @@ nav{
         border-radius: 36px;
         font-family: $para;
         overflow: visible;
-        margin-top: 16px;
+
+        @media(min-width:640px){
+            width: 70%;
+        }
 
         .nav_logo{
             width: 36px;
             margin: 5px 0 0 16px;
+            z-index: 1;
 
             img{
                 width: 100%;
@@ -36,6 +42,23 @@ nav{
 
         .nav_links{
             display: none;
+
+            @media(min-width:769px){
+                display: flex;
+                margin-right: 36px;
+
+                ul{
+                    display: flex;
+                    gap: 24px;
+
+                    a{
+                        text-decoration: none;
+                        color: $primary;
+                        list-style: none;
+                        font-weight: $bold;
+                    }
+                }
+            }
         }
 
         .mob_ham{
@@ -46,6 +69,11 @@ nav{
             justify-content: center;
             gap: 8px;
             right: 16px;
+            z-index: 1;
+
+            @media(min-width:769px){
+                display: none;
+            }
 
             div{
                 background-color: $primary;
@@ -82,8 +110,12 @@ nav{
             background-color: $accent;
             border-radius: 36px;
             overflow: hidden;
-            z-index: -1;
+            z-index: 0;
             transition: height .3s ease-in-out;
+
+            @media(min-width:769px){
+                display: none;
+            }
 
             &.open{
                 height: 250px;
@@ -95,6 +127,12 @@ nav{
                 align-items: end;
                 margin: 0 24px 16px 0;
                 gap: 20px;
+                opacity: 0;
+                transition: opacity .3s ease-in-out;
+
+                &.open{
+                    opacity: 1;
+                }
 
                 a{
                     text-decoration: none;

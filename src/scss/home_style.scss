@@ -155,3 +155,65 @@
     }
 
 }
+
+
+.courses_container{
+    color: $white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 80px 0;
+
+    h3{
+        font-family: $heading;
+        font-weight: $extra_bold;
+        font-size: 36px;
+    }
+
+    .course_list{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+
+        .course{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: $secondary;
+            position: relative;
+            border-radius: 24px;
+            width: 170px;
+            height: 250px;
+            z-index: 0;
+
+            .course_icon{
+                width: 100px;
+
+                img{
+                    width: 100%;
+                }
+            }
+
+            p{
+                font-family: $para;
+                text-align: center;
+                font-weight: $bold;
+            }
+
+            a{
+                button{
+                    padding: 10px 20px;
+                    border-radius: 60px;
+                    border: none;
+                    background-color: $accent;
+                    cursor: pointer;
+                }   
+            }
+        }
+    }
+}
